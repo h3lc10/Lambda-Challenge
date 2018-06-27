@@ -47,18 +47,21 @@ if (num % 3 === 0 &&	 num % 5 === 0){
              longestString(['hi', 'hello', 'ni hao', 'guten tag']); // returns 'guten tag'
              longestString(['JavaScript', 'HTML', 'CSS']); // returns 'JavaScript'
 */
-
-function longestString(arr) {
+function longestString(arr){
 var longest = '';
-	for(var i = 0; i < arr.length; i ++) {
-		if(arr[i].length >longest.length){
-			longest = arr[i].length;
-		}
-			return longest;
-	}
-
+for (var i = 0; i < arr.length; i ++) {
+	while(arr[i].length > longest.length){
+		longest = arr[i];
+	 }
+  }
+	return longest;
 }
-console.log(longestString(['macac', 'goril', 'erva','girafa']))
+
+
+
+
+
+
 /*
 4. Write a function called computeUserAverageAge that has a single parameter called users
      users is an array of user objects.
@@ -89,7 +92,6 @@ for (var i = 0; i < users.length; i ++) {
 }
 	return Math.round( ageSum / count);
 }
-console.log(computeUserAverageAge(users))
 
 module.exports = {
  helloWorld,
